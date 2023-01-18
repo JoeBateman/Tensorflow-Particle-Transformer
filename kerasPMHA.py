@@ -1,3 +1,11 @@
+"""
+This code is taken from https://github.com/keras-team/keras/blob/v2.11.0/keras/layers/attention/multi_head_attention.py#L131,
+with additional methods to account for the biasing matrix used by the Particle MHA layers of the Particle Transformer. This 
+involved creating an additional (optional) input called "bias_mask", which is added to the score of attention before the 
+softmax function.
+"""
+
+
 import numpy as np
 import vector
 import collections
